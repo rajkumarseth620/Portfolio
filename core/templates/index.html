@@ -1,0 +1,522 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Showcase</title>
+    <meta name="description" content="Welcome to my personal portfolio. Explore my recent projects, technical skills, and get in touch.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Background Grid and Blobs -->
+    <div class="bg-glowing-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="logo">Portfolio<span>.</span></a>
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="/admin/" class="nav-link admin-btn" target="_blank"><i class="fa-solid fa-lock"></i> Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <span class="hero-subtitle">WELCOME TO MY PORTFOLIO</span>
+                <h1 class="hero-title">Hi, I'm <span class="highlight-text">Developer</span></h1>
+                <h2 class="hero-typewriter">I am a <span class="typewriter-text" id="typewriter-text"></span><span class="cursor">|</span></h2>
+                <p class="hero-description">
+                    Building next-generation web applications with robust backends and stunning, responsive user interfaces. Explore my work and expertise below.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-card-wrapper">
+                    <div class="visual-card">
+                        <div class="card-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="card-body">
+                            <pre><code class="code-editor"><span class="code-keyword">const</span> developer = {
+  name: <span class="code-string">'Creative Mind'</span>,
+  stack: [<span class="code-string">'Django'</span>, <span class="code-string">'MySQL'</span>, <span class="code-string">'JS'</span>],
+  passion: <span class="code-string">'Building Cool Products'</span>,
+  experience: <span class="code-number">3</span>, 
+  solveProblems: () => <span class="code-keyword">true</span>
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">GET TO KNOW ME</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-info">
+                        <h3 class="about-headline">Developing High-Quality Applications</h3>
+                        <p class="about-text">
+                            I am a passionate Full-Stack Developer specializing in Django backend architecture and modern, intuitive frontend design. With a focus on performance, scalability, and pixel-perfect layouts, I enjoy turning complex problems into elegant, user-friendly solutions.
+                        </p>
+                        <p class="about-text">
+                            My journey began with a strong interest in technology, which evolved into a dedicated career building robust, database-driven applications. I love working with MySQL, structuring relational data, and crafting clean backend APIs, while polishing the user experience with custom JavaScript and responsive CSS designs.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-card">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">2+</span>
+                                <span class="stat-label">Years Learning</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">99%</span>
+                                <span class="stat-label">Client Focus</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-details">
+                        <div class="details-card">
+                            <h3>Profile Details</h3>
+                            <ul class="details-list">
+                                <li><strong>Full Name:</strong> Raj Kumar Seth</li>
+                                <li><strong>Specialization:</strong> Full-Stack Development</li>
+                                <li><strong>Email:</strong> rajkumarseth@gmail.com</li>
+                                <li><strong>Database Stack:</strong> MySQL Database Engine</li>
+                                <li><strong>Backend Stack:</strong> Django (Python) Framework</li>
+                                <li><strong>Frontend Stack:</strong> HTML5 / CSS3 / JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">MY EXPERTISE</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Frontend Skills -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-code icon-frontend"></i>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="skills-list">
+                            {% if skills_by_category.frontend %}
+                                {% for skill in skills_by_category.frontend %}
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span><i class="{{ skill.icon_class|default:'fa-solid fa-circle-check' }}"></i> {{ skill.name }}</span>
+                                        <span>{{ skill.proficiency }}%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress" style="width: {{ skill.proficiency }}%"></div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% else %}
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span><i class="fab fa-html5"></i> HTML5</span>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span><i class="fab fa-css3-alt"></i> CSS3</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span><i class="fab fa-js"></i> JavaScript</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Backend Skills -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-server icon-backend"></i>
+                            <h3>Backend</h3>
+                        </div>
+                        <div class="skills-list">
+                            {% if skills_by_category.backend %}
+                                {% for skill in skills_by_category.backend %}
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span><i class="{{ skill.icon_class|default:'fa-solid fa-circle-check' }}"></i> {{ skill.name }}</span>
+                                        <span>{{ skill.proficiency }}%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress" style="width: {{ skill.proficiency }}%"></div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% else %}
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span><i class="fab fa-python"></i> Python</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span><i class="fa-solid fa-cubes"></i> Django Framework</span>
+                                        <span>88%</span>
+                                    </div>
+                                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-database icon-database"></i>
+                            <h3>Databases</h3>
+                        </div>
+                        <div class="skills-list">
+                            {% if skills_by_category.database %}
+                                {% for skill in skills_by_category.database %}
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span><i class="{{ skill.icon_class|default:'fa-solid fa-circle-check' }}"></i> {{ skill.name }}</span>
+                                        <span>{{ skill.proficiency }}%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress" style="width: {{ skill.proficiency }}%"></div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% else %}
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span><i class="fa-solid fa-database"></i> MySQL</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Tools & Others -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-screwdriver-wrench icon-tools"></i>
+                            <h3>Tools & Others</h3>
+                        </div>
+                        <div class="skills-list">
+                            {% if skills_by_category.tools %}
+                                {% for skill in skills_by_category.tools %}
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span><i class="{{ skill.icon_class|default:'fa-solid fa-circle-check' }}"></i> {{ skill.name }}</span>
+                                        <span>{{ skill.proficiency }}%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress" style="width: {{ skill.proficiency }}%"></div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% else %}
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span><i class="fab fa-git-alt"></i> Git & Version Control</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span><i class="fa-solid fa-network-wired"></i> RESTful APIs</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">MY PORTFOLIO</span>
+                    <h2 class="section-title">Recent Projects</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="projects-grid">
+                    {% if projects %}
+                        {% for project in projects %}
+                        <div class="project-card">
+                            <div class="project-img-wrapper">
+                                {% if project.image_url %}
+                                    <img src="{{ project.image_url }}" alt="{{ project.title }}" class="project-img">
+                                {% else %}
+                                    <!-- Fallback Elegant Visual CSS Card -->
+                                    <div class="project-img-fallback">
+                                        <i class="fa-solid fa-laptop-code"></i>
+                                        <span>{{ project.title }}</span>
+                                    </div>
+                                {% endif %}
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        {% if project.github_url %}
+                                        <a href="{{ project.github_url }}" class="project-link-btn" target="_blank" title="GitHub Source"><i class="fab fa-github"></i></a>
+                                        {% endif %}
+                                        {% if project.project_url %}
+                                        <a href="{{ project.project_url }}" class="project-link-btn" target="_blank" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-details">
+                                <h3 class="project-title">{{ project.title }}</h3>
+                                <p class="project-description">{{ project.description }}</p>
+                                <div class="project-tech-tags">
+                                    {% for tech in project.tech_list %}
+                                        <span class="tech-tag">{{ tech }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <!-- Default mock projects shown if database has none -->
+                        <!-- Project 1 -->
+                        <div class="project-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-img-fallback ecommerce-bg">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>E-Commerce Platform</span>
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="#" class="project-link-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="#" class="project-link-btn" title="Live"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-details">
+                                <h3 class="project-title">Secure E-Commerce Dashboard</h3>
+                                <p class="project-description">A fully featured store application with MySQL backend database integration, order processing, and payment status mock-ups.</p>
+                                <div class="project-tech-tags">
+                                    <span class="tech-tag">Django</span>
+                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 2 -->
+                        <div class="project-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-img-fallback kanban-bg">
+                                    <i class="fa-solid fa-list-check"></i>
+                                    <span>Task Management Kanban</span>
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="#" class="project-link-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="#" class="project-link-btn" title="Live"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-details">
+                                <h3 class="project-title">Kanban Task Board</h3>
+                                <p class="project-description">Interactive task tracking system with drag-and-drop actions, real-time board updates, and project grouping capabilities.</p>
+                                <div class="project-tech-tags">
+                                    <span class="tech-tag">HTML5/CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Django REST</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-img-fallback blog-bg">
+                                    <i class="fa-solid fa-book-open"></i>
+                                    <span>AI Blog Engine</span>
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="#" class="project-link-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="#" class="project-link-btn" title="Live"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-details">
+                                <h3 class="project-title">Content Publishing Engine</h3>
+                                <p class="project-description">Dynamic blogging platform featuring Markdown composition, search engine indexing, and categorizations stored in a relational database.</p>
+                                <div class="project-tech-tags">
+                                    <span class="tech-tag">Django</span>
+                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">CSS Flexbox</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">GET IN TOUCH</span>
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-panel">
+                        <h3>Let's collaborate on your next build</h3>
+                        <p class="contact-subtext">Have a project in mind, want to hire me, or just want to chat? Fill out the form and I'll get back to you within 24 hours.</p>
+                        
+                        <div class="contact-cards">
+                            <div class="info-card">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div class="info-card-text">
+                                    <span>Email Me</span>
+                                    <a href="mailto:developer@example.com">rajkumarseth@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="info-card-text">
+                                    <span>Location</span>
+                                    <p>Ranchi, Jharkhand, India</p>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <i class="fa-solid fa-globe"></i>
+                                <div class="info-card-text">
+                                    <span>Social Media</span>
+                                    <div class="social-icons">
+                                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-panel">
+                        <form id="contact-form" class="contact-form" method="POST" action="{% url 'contact_submit' %}">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" placeholder="Project Discussion" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message Details</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Describe your project, timeline, or requirements..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                                Send Message <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+                            
+                            <!-- Custom Message Status Notification -->
+                            <div class="form-status" id="form-status">
+                                <!-- Will be dynamically populated by JS -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-copy">&copy; 2026 Developer Portfolio. Built with Django & MySQL.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
