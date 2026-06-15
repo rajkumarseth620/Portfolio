@@ -46,7 +46,7 @@ def contact_submit(request):
             'success': True,
             'message': 'Thank you! Your message has been sent successfully.'
         })
-    except Exception as e:
+    except Exception :
         return JsonResponse({
             'success': False,
             'error': 'Something went wrong while saving your message. Please try again.'
