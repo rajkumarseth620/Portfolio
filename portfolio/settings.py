@@ -37,7 +37,7 @@ if env_file.exists():
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-*a215ywvcyn-$kvr%n_ml70yqi$+(i$od*g3rlygmjvw2on&7q')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'True').lower() in ('true', '1', 't')
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
